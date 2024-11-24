@@ -1,0 +1,35 @@
+service: serverless-sample
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: ap-northeast-2
+  stage: ${opt:stage, 'dev'}  # 기본값을 dev로 설정
+
+functions:
+  get-hello:
+    handler: src/functions/get-hello.handler
+    events:
+      - httpApi:
+          path: /hello
+          method: GET
+
+  get-sum:
+    handler: src/functions/get-sum.handler
+    events:
+      - httpApi:
+          path: /sum
+          method: GET
+
+package:
+  individually: true
+
+# https://www.serverless.com/framework/docs/providers/aws/guide/building
+# In Serverless Framework V.4, esbuild is included within the Framework for bundling
+build:
+  esbuild:
+    # Enable or Disable bundling the function code and dependencies. (Default: true)
+    bundle: true
+    # Enable minifying function code. (Default: false)
+    minify: true
+    sourcemap: falsa
