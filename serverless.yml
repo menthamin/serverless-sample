@@ -32,4 +32,4 @@ build:
     bundle: true
     # Enable minifying function code. (Default: false)
     minify: true
-    sourcemap: falsa
+    sourcemap: false
