@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "serverless": "^4.4.11",
+    "serverless-esbuild": "^1.54.6",
+    "ulid": "^2.3.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.2"
+  }
+}
