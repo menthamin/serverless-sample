@@ -5,6 +5,13 @@
     "ulid": "^2.3.0"
   },
   "devDependencies": {
+    "husky": "^9.1.7",
+    "serverless-offline": "^14.4.0",
     "typescript": "^5.7.2"
+  },
+  "scripts": {
+    "test:offline": "serverless offline start --stage local",
+    "prepare": "husky",
+    "type-check": "tsc --noEmit"
   }
 }

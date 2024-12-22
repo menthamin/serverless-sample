@@ -34,6 +34,13 @@ Default region name [None]: ap-northeast-2 // 서울 리전
 Default output format [None]: json
 ```
 
+### 로컬 테스트
+
+```bash
+serverless offline -s local start
+```
+
+
 ### 배포
 
 ```bash
