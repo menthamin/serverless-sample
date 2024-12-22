@@ -1,4 +1,9 @@
+# "org" ensures this Service is used with the correct Serverless Framework Access Key.
+org: nugunadata
 service: serverless-sample
+
+plugins:
+  - serverless-offline
 
 provider:
   name: aws
