@@ -12,6 +12,7 @@
   "scripts": {
     "test:offline": "serverless offline start --stage local",
     "prepare": "husky",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "test": "npm run type-check"
   }
 }
